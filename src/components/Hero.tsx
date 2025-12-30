@@ -1,11 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Shield, Award, Users } from "lucide-react";
+import { ChevronDown, Shield, Award } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const stats = [
   { icon: Shield, value: "30+", label: "Anos de Experiência" },
   { icon: Award, value: "500+", label: "Projetos Concluídos" },
-  { icon: Users, value: "50+", label: "Clientes Atendidos" },
 ];
 
 export const Hero = () => {
@@ -54,7 +53,7 @@ export const Hero = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 animate-fade-up opacity-0 animation-delay-400">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl animate-fade-up opacity-0 animation-delay-400">
             {stats.map((stat, index) => (
               <div
                 key={stat.label}
@@ -78,7 +77,6 @@ export const Hero = () => {
         href="#servicos"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-primary-foreground/60 hover:text-gold transition-colors animate-float"
       >
-        <span className="text-sm font-medium">Saiba mais</span>
         <ChevronDown className="w-6 h-6" />
       </a>
     </section>
