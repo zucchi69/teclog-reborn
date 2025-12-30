@@ -11,7 +11,7 @@ const clients = [
   { name: "Vale", logo: valeLogo, scale: "scale-100" },
   { name: "ArcelorMittal", logo: arcelormittalLogo, scale: "scale-100" },
   { name: "Samarco", logo: samarcoLogo, scale: "scale-100" },
-  { name: "Petrocity", logo: petrocityLogo, scale: "scale-150" },
+  { name: "Petrocity", logo: petrocityLogo, scale: "scale-110" },
 ];
 
 export const Clients = () => {
