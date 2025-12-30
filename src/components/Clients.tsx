@@ -1,10 +1,17 @@
+import petrobrasLogo from "@/assets/clients/petrobras.png";
+import transpetroLogo from "@/assets/clients/transpetro.png";
+import valeLogo from "@/assets/clients/vale.png";
+import arcelormittalLogo from "@/assets/clients/arcelormittal.png";
+import samarcoLogo from "@/assets/clients/samarco.svg";
+import petrocityLogo from "@/assets/clients/petrocity.png";
+
 const clients = [
-  { name: "Petrobras", abbr: "PB" },
-  { name: "Transpetro", abbr: "TR" },
-  { name: "Vale", abbr: "VA" },
-  { name: "ArcelorMittal", abbr: "AM" },
-  { name: "Samarco", abbr: "SM" },
-  { name: "Petrocity", abbr: "PC" },
+  { name: "Petrobras", logo: petrobrasLogo },
+  { name: "Transpetro", logo: transpetroLogo },
+  { name: "Vale", logo: valeLogo },
+  { name: "ArcelorMittal", logo: arcelormittalLogo },
+  { name: "Samarco", logo: samarcoLogo },
+  { name: "Petrocity", logo: petrocityLogo },
 ];
 
 export const Clients = () => {
@@ -30,15 +37,19 @@ export const Clients = () => {
           {clients.map((client, index) => (
             <div
               key={client.name}
-              className="group bg-card rounded-2xl p-8 flex flex-col items-center justify-center border border-border hover:border-gold/50 hover:shadow-gold transition-all duration-300 hover:-translate-y-1"
+              className="group bg-card rounded-2xl p-6 flex flex-col items-center justify-center border border-border hover:border-gold/50 hover:shadow-gold transition-all duration-300 hover:-translate-y-1 min-h-[140px]"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <div className="w-16 h-16 bg-muted rounded-xl flex items-center justify-center mb-4 group-hover:bg-petrol transition-colors duration-300">
-                <span className="text-2xl font-heading font-bold text-muted-foreground group-hover:text-primary-foreground transition-colors duration-300">
-                  {client.abbr}
-                </span>
+              <div className="w-full h-16 flex items-center justify-center mb-3">
+                <img 
+                  src={client.logo} 
+                  alt={`Logo ${client.name}`}
+                  className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
               </div>
-              <span className="text-sm font-medium text-foreground text-center">{client.name}</span>
+              <span className="text-xs font-medium text-muted-foreground text-center group-hover:text-foreground transition-colors">
+                {client.name}
+              </span>
             </div>
           ))}
         </div>
