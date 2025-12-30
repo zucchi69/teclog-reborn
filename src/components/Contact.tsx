@@ -19,8 +19,8 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Endereço",
-    value: "Estrada do Contorno de Jacaraipe, nº 235, Portal de Jacaraipe, Serra - ES, CEP: 29.173-830",
-    href: "https://maps.google.com/?q=Estrada+do+Contorno+de+Jacaraipe+235+Serra+ES",
+    value: "Av. Lagoa Juara, 235 - Portal de Jacaraípe, Serra - ES, 29173-830",
+    href: "https://maps.google.com/?q=Av.+Lagoa+Juara,+235+-+Portal+de+Jacaraípe,+Serra+-+ES,+29173-830",
   },
   {
     icon: Clock,
@@ -192,7 +192,7 @@ export const Contact = () => {
             {/* Map Embed */}
             <div className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border h-64">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.8!2d-40.23!3d-20.13!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDA3JzQ4LjAiUyA0MMKwMTMnNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.5!2d-40.2085!3d-20.1355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb818e1b9c0c0c7%3A0x0!2sAv.+Lagoa+Juara%2C+235+-+Portal+de+Jacaraípe%2C+Serra+-+ES%2C+29173-830!5e0!3m2!1spt-BR!2sbr!4v1"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
