@@ -119,12 +119,9 @@ export const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
-        <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-primary-foreground/60 text-sm text-center md:text-left">
+        <div className="container mx-auto px-4 py-6 flex justify-center items-center">
+          <p className="text-primary-foreground/60 text-sm text-center">
             © {currentYear} TECLOG - Tecnologia e Logística Ltda. Todos os direitos reservados.
-          </p>
-          <p className="text-primary-foreground/40 text-sm">
-            Desenvolvido com ❤️ pela família
           </p>
         </div>
       </div>

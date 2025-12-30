@@ -6,12 +6,12 @@ import samarcoLogo from "@/assets/clients/samarco.svg";
 import petrocityLogo from "@/assets/clients/petrocity.png";
 
 const clients = [
-  { name: "Petrobras", logo: petrobrasLogo },
-  { name: "Transpetro", logo: transpetroLogo },
-  { name: "Vale", logo: valeLogo },
-  { name: "ArcelorMittal", logo: arcelormittalLogo },
-  { name: "Samarco", logo: samarcoLogo },
-  { name: "Petrocity", logo: petrocityLogo },
+  { name: "Petrobras", logo: petrobrasLogo, scale: "scale-100" },
+  { name: "Transpetro", logo: transpetroLogo, scale: "scale-150" },
+  { name: "Vale", logo: valeLogo, scale: "scale-100" },
+  { name: "ArcelorMittal", logo: arcelormittalLogo, scale: "scale-100" },
+  { name: "Samarco", logo: samarcoLogo, scale: "scale-100" },
+  { name: "Petrocity", logo: petrocityLogo, scale: "scale-100" },
 ];
 
 export const Clients = () => {
@@ -40,11 +40,11 @@ export const Clients = () => {
               className="group bg-card rounded-2xl p-6 flex flex-col items-center justify-center border border-border hover:border-gold/50 hover:shadow-gold transition-all duration-300 hover:-translate-y-1 min-h-[140px]"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <div className="w-full h-16 flex items-center justify-center mb-3">
+              <div className="w-full h-16 flex items-center justify-center mb-3 overflow-hidden">
                 <img 
                   src={client.logo} 
                   alt={`Logo ${client.name}`}
-                  className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className={`max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300 ${client.scale}`}
                 />
               </div>
               <span className="text-xs font-medium text-muted-foreground text-center group-hover:text-foreground transition-colors">
