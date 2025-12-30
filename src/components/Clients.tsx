@@ -7,7 +7,7 @@ import petrocityLogo from "@/assets/clients/petrocity.png";
 
 const clients = [
   { name: "Petrobras", logo: petrobrasLogo, scale: "scale-100" },
-  { name: "Transpetro", logo: transpetroLogo, scale: "scale-150" },
+  { name: "Transpetro", logo: transpetroLogo, scale: "scale-[2.5]" },
   { name: "Vale", logo: valeLogo, scale: "scale-100" },
   { name: "ArcelorMittal", logo: arcelormittalLogo, scale: "scale-100" },
   { name: "Samarco", logo: samarcoLogo, scale: "scale-100" },
