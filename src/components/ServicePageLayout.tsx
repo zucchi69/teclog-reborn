@@ -53,7 +53,7 @@ export const ServicePageLayout = ({
       </section>
 
       {/* Content Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-10 md:py-12">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Text Content */}
