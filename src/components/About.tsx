@@ -1,8 +1,9 @@
 import { CheckCircle2, Target, Eye } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 const highlights = ["Equipe técnica altamente qualificada", "Certificações e conformidade com normas NR", "Equipamentos de última geração", "Atendimento em todo território nacional", "Experiência comprovada em grandes projetos", "Compromisso com segurança e meio ambiente"];
 export const About = () => {
-  return <section id="sobre" className="py-24 bg-muted/50">
+  return <section id="sobre" className="scroll-mt-24 py-24 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -33,7 +34,7 @@ export const About = () => {
             </div>
 
             <Button variant="default" size="lg" asChild>
-              <a href="#contato">Entre em Contato</a>
+              <Link to="/contato">Entre em Contato</Link>
             </Button>
           </div>
 

@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { preloadImagesSilent } from "@/hooks/useImagePreloader";
+import { serviceImagesMap } from "@/data/serviceImages";
 import serviceInertization from "@/assets/service-inertization.jpg";
 import serviceCleaning from "@/assets/service-cleaning.jpg";
 import serviceHydrostatic from "@/assets/service-hydrostatic.jpg";
@@ -47,6 +49,14 @@ const services = [
 ];
 
 export const Services = () => {
+  // Pré-carrega imagens do serviço quando usuário passa o mouse
+  const handleMouseEnter = (slug: string) => {
+    const images = serviceImagesMap[slug];
+    if (images) {
+      preloadImagesSilent(images);
+    }
+  };
+
   return (
     <section id="servicos" className="scroll-mt-20 py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -72,6 +82,7 @@ export const Services = () => {
               key={service.title}
               className="group relative bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 hover:-translate-y-2"
               style={{ animationDelay: `${index * 100}ms` }}
+              onMouseEnter={() => handleMouseEnter(service.slug)}
             >
               {/* Image */}
               <div className="relative h-52 overflow-hidden">
