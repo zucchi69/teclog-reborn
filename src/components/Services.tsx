@@ -94,7 +94,7 @@ export const Services = () => {
               </div>
 
               {/* Accent Border */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-petrol-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
             </article>
           ))}
         </div>

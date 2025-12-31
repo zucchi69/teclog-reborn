@@ -38,7 +38,7 @@ export const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
               {highlights.map((item) => (
                 <div key={item} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-gold flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-petrol-accent flex-shrink-0" />
                   <span className="text-foreground">{item}</span>
                 </div>
               ))}
@@ -52,8 +52,8 @@ export const About = () => {
           {/* Mission & Vision Cards */}
           <div className="space-y-6">
             <div className="bg-card rounded-2xl p-8 shadow-md border border-border">
-              <div className="w-14 h-14 bg-gradient-gold rounded-xl flex items-center justify-center shadow-gold mb-6">
-                <Target className="w-7 h-7 text-petrol-dark" />
+              <div className="w-14 h-14 bg-petrol-accent rounded-xl flex items-center justify-center shadow-petrol mb-6">
+                <Target className="w-7 h-7 text-primary-foreground" />
               </div>
               <h3 className="text-2xl font-heading font-semibold text-foreground mb-4">Nossa Missão</h3>
               <p className="text-muted-foreground">
@@ -64,8 +64,8 @@ export const About = () => {
             </div>
 
             <div className="bg-petrol rounded-2xl p-8 shadow-petrol">
-              <div className="w-14 h-14 bg-gold rounded-xl flex items-center justify-center shadow-gold mb-6">
-                <Eye className="w-7 h-7 text-petrol-dark" />
+              <div className="w-14 h-14 bg-petrol-accent rounded-xl flex items-center justify-center shadow-petrol mb-6">
+                <Eye className="w-7 h-7 text-primary-foreground" />
               </div>
               <h3 className="text-2xl font-heading font-semibold text-primary-foreground mb-4">Nossa Visão</h3>
               <p className="text-gold-light">

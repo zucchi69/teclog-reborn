@@ -168,7 +168,7 @@ export const Contact = () => {
                 key={item.label}
                 className="flex items-start gap-5 bg-card rounded-2xl p-6 shadow-sm border border-border hover:border-gold/30 transition-colors"
               >
-                <div className="w-14 h-14 bg-petrol rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-14 h-14 bg-petrol-accent rounded-xl flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
