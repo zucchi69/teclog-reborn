@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollManager } from "@/components/ScrollManager";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Contato from "./pages/Contato";
 import Inertizacao from "./pages/services/Inertizacao";
 import LimpezaDutos from "./pages/services/LimpezaDutos";
 import TesteHidrostatico from "./pages/services/TesteHidrostatico";
@@ -25,7 +24,6 @@ const App = () => (
         <ScrollManager />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/contato" element={<Contato />} />
           <Route path="/servicos/inertizacao" element={<Inertizacao />} />
           <Route path="/servicos/limpeza-de-dutos" element={<LimpezaDutos />} />
           <Route path="/servicos/teste-hidrostatico" element={<TesteHidrostatico />} />
