@@ -25,8 +25,8 @@ export const Hero = () => {
       <div className="container mx-auto px-4 relative z-10 pt-20">
         <div className="max-w-4xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-gold/20 backdrop-blur-sm border border-gold/30 rounded-full px-5 py-2 mb-8 animate-fade-up opacity-0">
-            <Award className="w-5 h-5 text-gold" />
+          <div className="inline-flex items-center gap-2 bg-petrol-accent/80 backdrop-blur-sm border border-petrol-accent rounded-full px-5 py-2 mb-8 animate-fade-up opacity-0">
+            <Award className="w-5 h-5 text-primary-foreground" />
             <span className="text-gold-light font-medium">Referência em Engenharia de Dutos</span>
           </div>
 
@@ -59,8 +59,8 @@ export const Hero = () => {
                 key={stat.label}
                 className="flex items-center gap-4 bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-5"
               >
-                <div className="w-14 h-14 bg-gradient-gold rounded-xl flex items-center justify-center shadow-gold">
-                  <stat.icon className="w-7 h-7 text-petrol-dark" />
+                <div className="w-14 h-14 bg-petrol-accent rounded-xl flex items-center justify-center shadow-petrol">
+                  <stat.icon className="w-7 h-7 text-primary-foreground" />
                 </div>
                 <div>
                   <div className="text-3xl font-heading font-bold text-primary-foreground">{stat.value}</div>

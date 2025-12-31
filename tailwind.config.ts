@@ -55,6 +55,7 @@ export default {
           DEFAULT: "hsl(var(--petrol))",
           dark: "hsl(var(--petrol-dark))",
           light: "hsl(var(--petrol-light))",
+          accent: "hsl(var(--petrol-accent))",
         },
         gold: {
           DEFAULT: "hsl(var(--gold))",
