@@ -16,37 +16,37 @@ export const ScrollManager = () => {
       window.history.scrollRestoration = "manual";
     }
 
-    // Pequeno delay para garantir que o DOM está renderizado
+    // Scroll imediato para o topo antes de qualquer renderização (sem hash)
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    // Com hash: pequeno delay para garantir que o DOM está renderizado
     const timeoutId = setTimeout(() => {
-      if (hash) {
-        // Remove o # do hash
-        const elementId = hash.slice(1);
-        const element = document.getElementById(elementId);
+      const elementId = hash.slice(1);
+      const element = document.getElementById(elementId);
 
-        if (element) {
-          // Desativa smooth scroll temporariamente para scroll instantâneo
-          const htmlElement = document.documentElement;
-          const originalScrollBehavior = htmlElement.style.scrollBehavior;
-          htmlElement.style.scrollBehavior = "auto";
+      if (element) {
+        // Desativa smooth scroll temporariamente para scroll instantâneo
+        const htmlElement = document.documentElement;
+        const originalScrollBehavior = htmlElement.style.scrollBehavior;
+        htmlElement.style.scrollBehavior = "auto";
 
-          // Calcula offset do header (aproximadamente 80px)
-          const headerOffset = 80;
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        // Calcula offset do header (aproximadamente 80px)
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "auto",
-          });
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "auto",
+        });
 
-          // Restaura o scroll-behavior original
-          requestAnimationFrame(() => {
-            htmlElement.style.scrollBehavior = originalScrollBehavior;
-          });
-        }
-      } else {
-        // Sem hash: vai para o topo instantaneamente
-        window.scrollTo(0, 0);
+        // Restaura o scroll-behavior original
+        requestAnimationFrame(() => {
+          htmlElement.style.scrollBehavior = originalScrollBehavior;
+        });
       }
     }, 10);
 
