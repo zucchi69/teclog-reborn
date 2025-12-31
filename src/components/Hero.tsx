@@ -23,9 +23,9 @@ export const Hero = () => {
       <div className="container mx-auto px-4 relative z-10 pt-20">
         <div className="max-w-4xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 backdrop-blur-sm border border-petrol-accent rounded-full px-5 py-2 mb-8 animate-fade-up opacity-0 bg-[#d1a347]">
-            <Award className="w-5 h-5 text-primary-foreground" />
-            <span className="font-medium text-white">Referência em Engenharia de Dutos</span>
+          <div className="inline-flex items-center gap-2 backdrop-blur-sm border border-gold/30 rounded-full px-5 py-2 mb-8 animate-fade-up opacity-0 bg-gold">
+            <Award className="w-5 h-5 text-petrol-dark" />
+            <span className="font-medium text-petrol-dark">Referência em Engenharia de Dutos</span>
           </div>
 
           {/* Headline */}
