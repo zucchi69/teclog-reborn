@@ -35,7 +35,7 @@ export const Services = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block text-gold font-medium tracking-widest uppercase text-sm mb-4">
+          <span className="inline-block font-medium tracking-widest uppercase text-sm mb-4 text-muted-foreground">
             Nossos Serviços
           </span>
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
@@ -64,11 +64,11 @@ export const Services = () => {
                 <h3 className="text-xl font-heading font-semibold text-foreground mb-3 group-hover:text-petrol transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground mb-4 line-clamp-3">
+                <p className="mb-4 line-clamp-3 text-petrol-dark">
                   {service.description}
                 </p>
-                <a href="#contato" className="inline-flex items-center gap-2 text-gold font-medium hover:text-gold-dark transition-colors group/link">
-                  <span>Saiba mais</span>
+                <a href="#contato" className="inline-flex items-center gap-2 font-medium transition-colors group/link text-muted-foreground">
+                  <span className="text-muted-foreground">Saiba mais</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                 </a>
               </div>

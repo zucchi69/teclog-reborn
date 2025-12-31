@@ -58,7 +58,7 @@ export const Contact = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block text-gold font-medium tracking-widest uppercase text-sm mb-4">
+          <span className="inline-block font-medium tracking-widest uppercase text-sm mb-4 text-muted-foreground">
             Contato
           </span>
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">

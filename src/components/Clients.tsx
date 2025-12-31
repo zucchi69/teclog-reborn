@@ -34,7 +34,7 @@ export const Clients = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block text-gold font-medium tracking-widest uppercase text-sm mb-4">
+          <span className="inline-block font-medium tracking-widest uppercase text-sm mb-4 text-muted-foreground">
             Nossos Clientes
           </span>
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
@@ -69,7 +69,7 @@ export const Clients = () => {
             Entre em contato conosco e descubra como podemos agregar valor às operações 
             da sua empresa com nossos serviços especializados.
           </p>
-          <a href="#contato" className="inline-flex items-center gap-2 font-semibold px-8 py-4 rounded-xl transition-colors shadow-gold text-white bg-petrol-light">
+          <a href="#contato" className="inline-flex items-center gap-2 font-semibold px-8 py-4 rounded-xl transition-colors shadow-gold bg-[#b3dfe6] text-secondary-foreground">
             Solicitar Proposta Comercial
           </a>
         </div>

@@ -7,7 +7,7 @@ export const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <span className="inline-block text-gold font-medium tracking-widest uppercase text-sm mb-4">
+            <span className="inline-block font-medium tracking-widest uppercase text-sm mb-4 text-muted-foreground">
               Quem Somos
             </span>
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
@@ -44,7 +44,7 @@ export const About = () => {
                 <Target className="w-7 h-7 text-primary-foreground" />
               </div>
               <h3 className="text-2xl font-heading font-semibold text-foreground mb-4">Nossa Missão</h3>
-              <p className="text-destructive-foreground">
+              <p className="text-popover-foreground">
                 Prestar serviços de engenharia e logística com excelência técnica, segurança operacional 
                 e respeito ao meio ambiente, contribuindo para o desenvolvimento sustentável do setor 
                 energético brasileiro.
@@ -56,11 +56,7 @@ export const About = () => {
                 <Eye className="w-7 h-7 text-primary-foreground" />
               </div>
               <h3 className="text-2xl font-heading font-semibold text-primary-foreground mb-4">Nossa Visão</h3>
-              <p className="text-gold-light">
-                Ser reconhecida como empresa de referência em serviços especializados para a indústria 
-                de óleo e gás, mantendo os mais elevados padrões de qualidade, segurança e inovação 
-                tecnológica.
-              </p>
+              <p className="text-[#b3dfe6]">Ser reconhecida como a maior empresa de serviços especializados para a indústria de óleo e gás, mantendo os mais elevados padrões de qualidade, segurança e inovação tecnológica.</p>
             </div>
           </div>
         </div>
