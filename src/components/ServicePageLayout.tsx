@@ -34,19 +34,19 @@ export const ServicePageLayout = ({
       <Header />
       
       {/* Hero Section - Compact with solid color */}
-      <section className="bg-petrol-dark pt-32 pb-12">
+      <section className="bg-petrol-dark pt-28 pb-6">
         <div className="container mx-auto px-4">
           <Link
             to="/#servicos"
-            className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-4"
+            className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-2 text-sm"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-3 h-3" />
             Voltar aos serviços
           </Link>
-          <span className="block text-secondary font-medium tracking-widest uppercase text-sm mb-2">
+          <span className="block text-secondary font-medium tracking-widest uppercase text-xs mb-1">
             {subtitle}
           </span>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-white">
             {title}
           </h1>
         </div>
