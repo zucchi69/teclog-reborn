@@ -46,7 +46,7 @@ export const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-card/95 backdrop-blur-md shadow-lg py-3" : "bg-transparent py-5"}`}>
+      <header className="sticky top-0 z-50 bg-petrol-dark/95 backdrop-blur-md shadow-lg py-3">
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-3">
@@ -54,10 +54,10 @@ export const Header = () => {
               <span className="text-primary-foreground font-heading font-bold text-xl">T</span>
             </div>
             <div className="flex flex-col">
-              <span className={`font-heading font-bold text-2xl tracking-tight ${isScrolled ? 'text-petrol' : 'text-primary-foreground'}`}>
+              <span className="font-heading font-bold text-2xl tracking-tight text-primary-foreground">
                 TECLOG
               </span>
-              <span className={`text-xs font-medium tracking-widest ${isScrolled ? 'text-muted-foreground' : 'text-gold-light'}`}>
+              <span className="text-xs font-medium tracking-widest text-gold-light">
                 TECNOLOGIA E LOGÍSTICA
               </span>
             </div>
@@ -65,16 +65,16 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-2">
-            {navLinks.map(link => <a key={link.label} href={link.href} className={`px-4 py-2 font-medium transition-all duration-300 rounded-lg ${isScrolled ? "text-foreground hover:text-petrol hover:bg-muted" : "text-primary-foreground/90 hover:text-gold-light hover:bg-primary-foreground/10"}`}>
+            {navLinks.map(link => <a key={link.label} href={link.href} className="px-4 py-2 font-medium transition-all duration-300 rounded-lg text-primary-foreground/90 hover:text-gold-light hover:bg-primary-foreground/10">
                 {link.label}
               </a>)}
-            <Button variant={isScrolled ? "default" : "hero"} size="lg" className="ml-4" asChild>
+            <Button variant="hero" size="lg" className="ml-4" asChild>
               <a href="#contato">Solicitar Orçamento</a>
             </Button>
           </nav>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className={`lg:hidden p-2 rounded-lg transition-colors ${isScrolled ? "text-foreground hover:bg-muted" : "text-primary-foreground hover:bg-primary-foreground/10"}`}>
+          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden p-2 rounded-lg transition-colors text-primary-foreground hover:bg-primary-foreground/10">
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
