@@ -24,7 +24,7 @@ export const Clients = () => {
             Nossos Clientes
           </span>
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Empresas que <span className="text-petrol">Confiam</span> em Nós
+            Empresas que <span className="text-highlight">Confiam</span> em Nós
           </h2>
           <p className="text-lg text-muted-foreground">
             Temos orgulho de atender algumas das maiores empresas do setor energético e 

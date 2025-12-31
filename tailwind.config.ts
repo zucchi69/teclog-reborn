@@ -66,6 +66,7 @@ export default {
           DEFAULT: "hsl(var(--steel))",
           light: "hsl(var(--steel-light))",
         },
+        highlight: "hsl(var(--highlight))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

@@ -62,7 +62,7 @@ export const Contact = () => {
             Contato
           </span>
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
-            Vamos Conversar Sobre seu <span className="text-petrol">Projeto</span>
+            Vamos Conversar Sobre seu <span className="text-highlight">Projeto</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Entre em contato conosco para solicitar um orçamento ou tirar dúvidas 

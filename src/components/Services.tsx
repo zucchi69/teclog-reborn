@@ -50,7 +50,7 @@ export const Services = () => {
           </span>
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
             Soluções Completas para a{" "}
-            <span className="text-petrol">Indústria de Óleo & Gás</span>
+            <span className="text-highlight">Indústria de Óleo & Gás</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Oferecemos serviços especializados em engenharia e logística, atendendo às 
