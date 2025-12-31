@@ -45,7 +45,7 @@ export const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-6 text-[#566f8f]">Navegação</h4>
+            <h4 className="font-heading font-semibold text-lg mb-6 text-petrol-accent">Navegação</h4>
             <ul className="space-y-3">
               {footerLinks.map(link => <li key={link.label}>
                   <a href={link.href} className="text-primary-foreground/80 hover:text-gold transition-colors">
@@ -57,7 +57,7 @@ export const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-6 text-[#566f8f]">Serviços</h4>
+            <h4 className="font-heading font-semibold text-lg mb-6 text-petrol-accent">Serviços</h4>
             <ul className="space-y-3">
               {services.map(service => <li key={service}>
                   <a href="#servicos" className="text-primary-foreground/80 hover:text-gold transition-colors">
@@ -69,7 +69,7 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-6 text-[#566f8f]">Contato</h4>
+            <h4 className="font-heading font-semibold text-lg mb-6 text-petrol-accent">Contato</h4>
             <ul className="space-y-4">
               <li>
                 <a href="tel:+552732450143" className="flex items-center gap-3 text-primary-foreground/80 hover:text-gold transition-colors">
