@@ -34,7 +34,7 @@ export const ServicePageLayout = ({
       <Header />
       
       {/* Hero Section - Compact with solid color */}
-      <section className="bg-petrol-dark pt-28 pb-6">
+      <section className="bg-petrol-dark py-6">
         <div className="container mx-auto px-4">
           <Link
             to="/#servicos"
