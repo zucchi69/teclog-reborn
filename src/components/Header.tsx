@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Serviços", href: "/#servicos" },
   { label: "Sobre", href: "/#sobre" },
   { label: "Clientes", href: "/#clientes" },
-  { label: "Contato", href: "/contato" },
+  { label: "Contato", href: "/#contato" },
 ];
 
 export const Header = () => {
@@ -88,7 +88,7 @@ export const Header = () => {
               </Link>
             ))}
             <Button variant="hero" size="lg" className="ml-4" asChild>
-              <Link to="/contato">Solicitar Orçamento</Link>
+              <Link to="/#contato">Solicitar Orçamento</Link>
             </Button>
           </nav>
 
@@ -122,7 +122,7 @@ export const Header = () => {
               </Link>
             ))}
             <Button variant="default" size="lg" className="mt-4" asChild>
-              <Link to="/contato">Solicitar Orçamento</Link>
+              <Link to="/#contato">Solicitar Orçamento</Link>
             </Button>
           </div>
         </div>

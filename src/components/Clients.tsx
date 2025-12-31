@@ -66,7 +66,7 @@ export const Clients = () => {
             operações da sua empresa com nossos serviços especializados.
           </p>
           <Link
-            to="/contato"
+            to="/#contato"
             className="inline-flex items-center gap-2 font-semibold px-8 py-4 rounded-xl transition-colors shadow-gold bg-[#b3dfe6] text-secondary-foreground"
           >
             Solicitar Proposta Comercial

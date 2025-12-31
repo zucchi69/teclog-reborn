@@ -76,7 +76,7 @@ export const ServicePageLayout = ({
               {/* CTA */}
               <div className="pt-6">
                 <Button asChild size="lg" className="gap-2">
-                  <Link to="/contato">
+                  <Link to="/#contato">
                     <Mail className="w-4 h-4" />
                     Solicitar Orçamento
                   </Link>
