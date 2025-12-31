@@ -11,37 +11,37 @@ const stats = [{
   label: "Projetos Concluídos"
 }];
 export const Hero = () => {
-  return <section id="inicio" className="relative min-h-screen flex items-center">
+  return <section id="inicio" className="relative min-h-screen flex items-start">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="Engenharia de dutos e pipelines" className="w-full h-full object-cover object-[center_70%]" />
+        <img src={heroBg} alt="Engenharia de dutos e pipelines" className="w-full h-full object-cover object-[center_95%] scale-125" />
         <div className="absolute inset-0 bg-gradient-overlay" />
         <div className="absolute inset-0 bg-petrol-dark/40" />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 pt-20">
+      <div className="container mx-auto px-4 relative z-10 pt-10 pb-12">
         <div className="max-w-4xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 backdrop-blur-sm border border-gold/30 rounded-full px-5 py-2 mb-8 animate-fade-up opacity-0 bg-gold">
+          <div className="inline-flex items-center gap-2 backdrop-blur-sm border border-gold/30 rounded-full px-5 py-2 mb-6 animate-fade-up opacity-0 bg-gold">
             <Award className="w-5 h-5 text-petrol-dark" />
             <span className="font-medium text-petrol-dark">Referência em Engenharia de Dutos</span>
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-6 animate-fade-up opacity-0 animation-delay-100">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-5 animate-fade-up opacity-0 animation-delay-100">
             Tecnologia e Excelência em{" "}
             <span className="text-highlight">Manutenção de Dutos</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl max-w-2xl mb-10 animate-fade-up opacity-0 animation-delay-200 text-primary-foreground">
+          <p className="text-lg md:text-xl max-w-2xl mb-8 animate-fade-up opacity-0 animation-delay-200 text-primary-foreground">
             Há mais de 30 anos oferecendo soluções especializadas em limpeza, inertização 
             e manutenção de dutos para a indústria de petróleo e gás do Brasil.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-up opacity-0 animation-delay-300">
+          <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-fade-up opacity-0 animation-delay-300">
             <Button variant="hero" size="xl" asChild>
               <a href="#servicos">Conheça Nossos Serviços</a>
             </Button>
