@@ -11,7 +11,7 @@ const stats = [{
   label: "Projetos Concluídos"
 }];
 export const Hero = () => {
-  return <section id="inicio" className="relative min-h-screen flex items-center">
+  return <section id="inicio" className="relative min-h-[85vh] flex items-center">
       {/* Background */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="Engenharia de dutos e pipelines" className="w-full h-full object-cover" />
