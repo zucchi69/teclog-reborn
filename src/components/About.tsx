@@ -21,7 +21,7 @@ export const About = () => {
               Quem Somos
             </span>
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
-              Mais de <span className="text-petrol">30 Anos</span> de Tradição em Engenharia
+              Mais de <span className="text-highlight">30 Anos</span> de Tradição em Engenharia
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
               A <strong className="text-foreground">TECLOG - Tecnologia e Logística</strong> é uma empresa capixaba 

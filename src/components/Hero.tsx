@@ -33,7 +33,7 @@ export const Hero = () => {
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-6 animate-fade-up opacity-0 animation-delay-100">
             Tecnologia e Excelência em{" "}
-            <span className="text-gradient-gold">Manutenção de Dutos</span>
+            <span className="text-highlight">Manutenção de Dutos</span>
           </h1>
 
           {/* Subheadline */}
