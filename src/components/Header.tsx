@@ -29,7 +29,7 @@ export const Header = () => {
   }, []);
   return <>
       {/* Top Bar */}
-      <div className="bg-petrol-dark text-primary-foreground py-2 hidden md:block">
+      <div className="bg-petrol-dark/80 backdrop-blur-sm text-primary-foreground py-2 hidden md:block">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
             <a href="tel:+552732450143" className="flex items-center gap-2 hover:text-gold transition-colors">
