@@ -37,7 +37,7 @@ export const Footer = () => {
                 </span>
               </div>
             </a>
-            <p className="mb-6 text-secondary">
+            <p className="mb-6 text-primary-foreground">
               Há mais de 30 anos oferecendo soluções especializadas em engenharia e 
               logística para a indústria de óleo e gás.
             </p>
