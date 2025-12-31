@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ArrowLeft, Phone } from "lucide-react";
+import { ArrowLeft, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
@@ -84,7 +84,7 @@ export const ServicePageLayout = ({
               <div className="pt-6">
                 <Button asChild size="lg" className="gap-2">
                   <Link to="/#contato">
-                    <Phone className="w-4 h-4" />
+                    <Mail className="w-4 h-4" />
                     Solicitar Orçamento
                   </Link>
                 </Button>
