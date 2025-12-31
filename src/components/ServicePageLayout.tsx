@@ -1,9 +1,9 @@
-import { useEffect } from "react";
 import { ArrowLeft, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Button } from "./ui/button";
+import { ImageWithSkeleton } from "./ImageWithSkeleton";
 
 interface ServicePageLayoutProps {
   title: string;
@@ -22,13 +22,6 @@ export const ServicePageLayout = ({
   features,
   images,
 }: ServicePageLayoutProps) => {
-  const { pathname } = useLocation();
-
-  // Scroll to top when page loads - instant, no animation
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-  }, [pathname]);
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -83,7 +76,7 @@ export const ServicePageLayout = ({
               {/* CTA */}
               <div className="pt-6">
                 <Button asChild size="lg" className="gap-2">
-                  <Link to="/#contato">
+                  <Link to="/contato">
                     <Mail className="w-4 h-4" />
                     Solicitar Orçamento
                   </Link>
@@ -91,7 +84,7 @@ export const ServicePageLayout = ({
               </div>
             </div>
             
-            {/* Image Gallery */}
+            {/* Image Gallery with Skeleton Loading */}
             <div className="grid grid-cols-2 gap-4">
               {images.map((image, index) => (
                 <div
@@ -100,10 +93,11 @@ export const ServicePageLayout = ({
                     index === 0 ? "col-span-2" : ""
                   }`}
                 >
-                  <img
+                  <ImageWithSkeleton
                     src={image}
                     alt={`${title} - Imagem ${index + 1}`}
-                    className="w-full h-full object-cover aspect-video hover:scale-105 transition-transform duration-500"
+                    className="hover:scale-105 transition-transform duration-500"
+                    aspectRatio="video"
                   />
                 </div>
               ))}

@@ -1,25 +1,21 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-const navLinks = [{
-  label: "Início",
-  href: "#inicio"
-}, {
-  label: "Serviços",
-  href: "#servicos"
-}, {
-  label: "Sobre",
-  href: "#sobre"
-}, {
-  label: "Clientes",
-  href: "#clientes"
-}, {
-  label: "Contato",
-  href: "#contato"
-}];
+
+const navLinks = [
+  { label: "Início", href: "/#inicio" },
+  { label: "Serviços", href: "/#servicos" },
+  { label: "Sobre", href: "/#sobre" },
+  { label: "Clientes", href: "/#clientes" },
+  { label: "Contato", href: "/contato" },
+];
+
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -27,21 +23,36 @@ export const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  return <>
+
+  // Fecha menu mobile ao mudar de rota
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
+
+  return (
+    <>
       {/* Top Bar */}
       <div className="bg-petrol-dark text-primary-foreground py-2 hidden md:block">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+552732450143" className="flex items-center gap-2 hover:text-gold transition-colors">
+            <a
+              href="tel:+552732450143"
+              className="flex items-center gap-2 hover:text-gold transition-colors"
+            >
               <Phone className="w-4 h-4" />
               <span>(27) 3245-0143</span>
             </a>
-            <a href="mailto:teclog@teclog.eng.br" className="flex items-center gap-2 hover:text-gold transition-colors">
+            <a
+              href="mailto:teclog@teclog.eng.br"
+              className="flex items-center gap-2 hover:text-gold transition-colors"
+            >
               <Mail className="w-4 h-4" />
               <span>teclog@teclog.eng.br</span>
             </a>
           </div>
-          <span className="font-medium text-primary-foreground">+30 anos de excelência em engenharia</span>
+          <span className="font-medium text-primary-foreground">
+            +30 anos de excelência em engenharia
+          </span>
         </div>
       </div>
 
@@ -49,9 +60,11 @@ export const Header = () => {
       <header className="sticky top-0 z-50 backdrop-blur-md shadow-lg py-3 bg-[#04294d]">
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
-          <a href="#inicio" className="flex items-center gap-3">
+          <Link to="/#inicio" className="flex items-center gap-3">
             <div className="w-12 h-12 bg-petrol-accent rounded-xl flex items-center justify-center shadow-petrol">
-              <span className="text-primary-foreground font-heading font-bold text-xl">T</span>
+              <span className="text-primary-foreground font-heading font-bold text-xl">
+                T
+              </span>
             </div>
             <div className="flex flex-col">
               <span className="font-heading font-bold text-2xl tracking-tight text-primary-foreground">
@@ -61,35 +74,59 @@ export const Header = () => {
                 TECNOLOGIA E LOGÍSTICA
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-2">
-            {navLinks.map(link => <a key={link.label} href={link.href} className="px-4 py-2 font-medium transition-all duration-300 rounded-lg text-primary-foreground/90 hover:text-gold-light hover:bg-primary-foreground/10">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="px-4 py-2 font-medium transition-all duration-300 rounded-lg text-primary-foreground/90 hover:text-gold-light hover:bg-primary-foreground/10"
+              >
                 {link.label}
-              </a>)}
+              </Link>
+            ))}
             <Button variant="hero" size="lg" className="ml-4" asChild>
-              <a href="#contato">Solicitar Orçamento</a>
+              <Link to="/contato">Solicitar Orçamento</Link>
             </Button>
           </nav>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="lg:hidden p-2 rounded-lg transition-colors text-primary-foreground hover:bg-primary-foreground/10">
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden p-2 rounded-lg transition-colors text-primary-foreground hover:bg-primary-foreground/10"
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden absolute top-full left-0 right-0 bg-card shadow-lg transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? "max-h-screen py-4" : "max-h-0 py-0"}`}>
+        <div
+          className={`lg:hidden absolute top-full left-0 right-0 bg-card shadow-lg transition-all duration-300 overflow-hidden ${
+            isMobileMenuOpen ? "max-h-screen py-4" : "max-h-0 py-0"
+          }`}
+        >
           <div className="container mx-auto px-4 flex flex-col gap-2">
-            {navLinks.map(link => <a key={link.label} href={link.href} onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 font-medium text-foreground hover:bg-muted rounded-lg transition-colors">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.href}
+                className="px-4 py-3 font-medium text-foreground hover:bg-muted rounded-lg transition-colors"
+              >
                 {link.label}
-              </a>)}
+              </Link>
+            ))}
             <Button variant="default" size="lg" className="mt-4" asChild>
-              <a href="#contato" onClick={() => setIsMobileMenuOpen(false)}>Solicitar Orçamento</a>
+              <Link to="/contato">Solicitar Orçamento</Link>
             </Button>
           </div>
         </div>
       </header>
-    </>;
+    </>
+  );
 };
