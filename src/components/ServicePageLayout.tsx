@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import { ArrowLeft, Phone } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Button } from "./ui/button";
@@ -21,33 +22,31 @@ export const ServicePageLayout = ({
   features,
   images,
 }: ServicePageLayoutProps) => {
+  const { pathname } = useLocation();
+
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-end">
-        <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt={title}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-petrol-dark via-petrol-dark/60 to-transparent" />
-        </div>
-        
-        <div className="container mx-auto px-4 pb-12 relative z-10">
+      {/* Hero Section - Compact with solid color */}
+      <section className="bg-petrol-dark pt-32 pb-12">
+        <div className="container mx-auto px-4">
           <Link
             to="/#servicos"
-            className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors mb-6"
+            className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-4"
           >
             <ArrowLeft className="w-4 h-4" />
             Voltar aos serviços
           </Link>
-          <span className="block text-secondary font-medium tracking-widest uppercase text-sm mb-3">
+          <span className="block text-secondary font-medium tracking-widest uppercase text-sm mb-2">
             {subtitle}
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white">
             {title}
           </h1>
         </div>
@@ -129,4 +128,3 @@ export const ServicePageLayout = ({
     </div>
   );
 };
-
