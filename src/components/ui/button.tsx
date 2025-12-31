@@ -16,8 +16,8 @@ const buttonVariants = cva(
         ghost: "hover:bg-muted hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Teclog specific variants
-        hero: "bg-gradient-gold text-foreground font-semibold shadow-gold hover:shadow-lg hover:-translate-y-1 hover:scale-105 border-0",
-        heroOutline: "border-2 border-gold-light bg-transparent text-gold-light hover:bg-gold-light hover:text-petrol-dark font-semibold",
+        hero: "bg-petrol-accent text-primary-foreground font-semibold shadow-petrol hover:shadow-lg hover:-translate-y-1 hover:scale-105 border-0",
+        heroOutline: "border-2 border-petrol-accent bg-transparent text-primary-foreground hover:bg-petrol-accent hover:text-primary-foreground font-semibold",
         petrol: "bg-petrol text-primary-foreground hover:bg-petrol-dark shadow-petrol",
         gold: "bg-gold text-foreground hover:bg-gold-dark shadow-gold",
       },
