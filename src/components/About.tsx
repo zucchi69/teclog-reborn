@@ -1,18 +1,8 @@
 import { CheckCircle2, Target, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const highlights = [
-  "Equipe técnica altamente qualificada",
-  "Certificações e conformidade com normas NR",
-  "Equipamentos de última geração",
-  "Atendimento em todo território nacional",
-  "Experiência comprovada em grandes projetos",
-  "Compromisso com segurança e meio ambiente",
-];
-
+const highlights = ["Equipe técnica altamente qualificada", "Certificações e conformidade com normas NR", "Equipamentos de última geração", "Atendimento em todo território nacional", "Experiência comprovada em grandes projetos", "Compromisso com segurança e meio ambiente"];
 export const About = () => {
-  return (
-    <section id="sobre" className="py-24 bg-muted/50">
+  return <section id="sobre" className="py-24 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -21,7 +11,7 @@ export const About = () => {
               Quem Somos
             </span>
             <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mb-6">
-              Mais de <span className="text-highlight">30 Anos</span> de Tradição em Engenharia
+              Mais de <span className="text-secondary">30 Anos</span> de Tradição em Engenharia
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
               A <strong className="text-foreground">TECLOG - Tecnologia e Logística</strong> é uma empresa capixaba 
@@ -36,12 +26,10 @@ export const About = () => {
 
             {/* Highlights Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-              {highlights.map((item) => (
-                <div key={item} className="flex items-center gap-3">
+              {highlights.map(item => <div key={item} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-petrol-accent flex-shrink-0" />
                   <span className="text-foreground">{item}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <Button variant="default" size="lg" asChild>
@@ -77,6 +65,5 @@ export const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };

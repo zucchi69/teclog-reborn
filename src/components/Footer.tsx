@@ -1,27 +1,24 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-
-const footerLinks = [
-  { label: "Início", href: "#inicio" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Clientes", href: "#clientes" },
-  { label: "Contato", href: "#contato" },
-];
-
-const services = [
-  "Inertização",
-  "Limpeza de Dutos",
-  "Teste Hidrostático",
-  "Enchimento de Dutos",
-  "Manutenção Industrial",
-  "Esvaziamento e Secagem",
-];
-
+const footerLinks = [{
+  label: "Início",
+  href: "#inicio"
+}, {
+  label: "Serviços",
+  href: "#servicos"
+}, {
+  label: "Sobre",
+  href: "#sobre"
+}, {
+  label: "Clientes",
+  href: "#clientes"
+}, {
+  label: "Contato",
+  href: "#contato"
+}];
+const services = ["Inertização", "Limpeza de Dutos", "Teste Hidrostático", "Enchimento de Dutos", "Manutenção Industrial", "Esvaziamento e Secagem"];
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-petrol-dark text-primary-foreground">
+  return <footer className="bg-petrol-dark text-primary-foreground">
       {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -35,12 +32,12 @@ export const Footer = () => {
                 <span className="font-heading font-bold text-2xl tracking-tight text-primary-foreground">
                   TECLOG
                 </span>
-                <span className="text-xs font-medium tracking-widest text-gold-light">
+                <span className="text-xs font-medium tracking-widest text-primary-foreground">
                   TECNOLOGIA E LOGÍSTICA
                 </span>
               </div>
             </a>
-            <p className="text-gold-light/80 mb-6">
+            <p className="mb-6 text-primary-foreground">
               Há mais de 30 anos oferecendo soluções especializadas em engenharia e 
               logística para a indústria de óleo e gás.
             </p>
@@ -50,16 +47,11 @@ export const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-6 text-gold">Navegação</h4>
             <ul className="space-y-3">
-              {footerLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/80 hover:text-gold transition-colors"
-                  >
+              {footerLinks.map(link => <li key={link.label}>
+                  <a href={link.href} className="text-primary-foreground/80 hover:text-gold transition-colors">
                     {link.label}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -67,16 +59,11 @@ export const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-6 text-gold">Serviços</h4>
             <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service}>
-                  <a
-                    href="#servicos"
-                    className="text-primary-foreground/80 hover:text-gold transition-colors"
-                  >
+              {services.map(service => <li key={service}>
+                  <a href="#servicos" className="text-primary-foreground/80 hover:text-gold transition-colors">
                     {service}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -85,19 +72,13 @@ export const Footer = () => {
             <h4 className="font-heading font-semibold text-lg mb-6 text-gold">Contato</h4>
             <ul className="space-y-4">
               <li>
-                <a
-                  href="tel:+552732450143"
-                  className="flex items-center gap-3 text-primary-foreground/80 hover:text-gold transition-colors"
-                >
+                <a href="tel:+552732450143" className="flex items-center gap-3 text-primary-foreground/80 hover:text-gold transition-colors">
                   <Phone className="w-5 h-5 text-petrol-accent" />
                   <span>(27) 3245-0143</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:teclog@teclog.eng.br"
-                  className="flex items-center gap-3 text-primary-foreground/80 hover:text-gold transition-colors"
-                >
+                <a href="mailto:teclog@teclog.eng.br" className="flex items-center gap-3 text-primary-foreground/80 hover:text-gold transition-colors">
                   <Mail className="w-5 h-5 text-petrol-accent" />
                   <span>teclog@teclog.eng.br</span>
                 </a>
@@ -125,6 +106,5 @@ export const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
