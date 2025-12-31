@@ -35,7 +35,7 @@ export const Contact = () => {
             Vamos Conversar Sobre seu{" "}
             <span className="text-secondary">Projeto</span>
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Entre em contato conosco para solicitar um orçamento ou tirar
             dúvidas sobre nossos serviços. Nossa equipe está pronta para
             atendê-lo.
