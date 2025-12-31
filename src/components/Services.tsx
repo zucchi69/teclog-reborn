@@ -1,37 +1,54 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import serviceInertization from "@/assets/service-inertization.jpg";
 import serviceCleaning from "@/assets/service-cleaning.jpg";
 import serviceHydrostatic from "@/assets/service-hydrostatic.jpg";
 import serviceFilling from "@/assets/service-filling.jpg";
 import serviceMaintenance from "@/assets/service-maintenance.jpg";
 import serviceDrying from "@/assets/service-drying.jpg";
-const services = [{
-  title: "Inertização",
-  description: "Substituição de atmosfera de dutos com gases inertes para garantir segurança em operações de manutenção e inspeção.",
-  image: serviceInertization
-}, {
-  title: "Limpeza de Dutos",
-  description: "Remoção de detritos, incrustações e resíduos através de técnicas especializadas de passagem de pigs.",
-  image: serviceCleaning
-}, {
-  title: "Teste Hidrostático",
-  description: "Ensaios de pressão para verificação da integridade estrutural e estanqueidade de dutos e equipamentos.",
-  image: serviceHydrostatic
-}, {
-  title: "Enchimento de Dutos",
-  description: "Operações controladas de enchimento com água ou outros fluidos para comissionamento e testes.",
-  image: serviceFilling
-}, {
-  title: "Manutenção Industrial",
-  description: "Serviços especializados de manutenção preventiva e corretiva em equipamentos industriais.",
-  image: serviceMaintenance
-}, {
-  title: "Esvaziamento e Secagem",
-  description: "Procedimentos de desidratação e remoção de fluidos para preparação de dutos e sistemas.",
-  image: serviceDrying
-}];
+
+const services = [
+  {
+    title: "Inertização",
+    description: "Substituição de atmosfera de dutos com gases inertes para garantir segurança em operações de manutenção e inspeção.",
+    image: serviceInertization,
+    slug: "/servicos/inertizacao",
+  },
+  {
+    title: "Limpeza de Dutos",
+    description: "Remoção de detritos, incrustações e resíduos através de técnicas especializadas de passagem de pigs.",
+    image: serviceCleaning,
+    slug: "/servicos/limpeza-de-dutos",
+  },
+  {
+    title: "Teste Hidrostático",
+    description: "Ensaios de pressão para verificação da integridade estrutural e estanqueidade de dutos e equipamentos.",
+    image: serviceHydrostatic,
+    slug: "/servicos/teste-hidrostatico",
+  },
+  {
+    title: "Enchimento de Dutos",
+    description: "Operações controladas de enchimento com água ou outros fluidos para comissionamento e testes.",
+    image: serviceFilling,
+    slug: "/servicos/enchimento-de-dutos",
+  },
+  {
+    title: "Manutenção Industrial",
+    description: "Serviços especializados de manutenção preventiva e corretiva em equipamentos industriais.",
+    image: serviceMaintenance,
+    slug: "/servicos/manutencao-industrial",
+  },
+  {
+    title: "Esvaziamento e Secagem",
+    description: "Procedimentos de desidratação e remoção de fluidos para preparação de dutos e sistemas.",
+    image: serviceDrying,
+    slug: "/servicos/esvaziamento-e-secagem",
+  },
+];
+
 export const Services = () => {
-  return <section id="servicos" className="py-24 bg-background">
+  return (
+    <section id="servicos" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -50,12 +67,19 @@ export const Services = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => <article key={service.title} className="group relative bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 hover:-translate-y-2" style={{
-          animationDelay: `${index * 100}ms`
-        }}>
+          {services.map((service, index) => (
+            <article
+              key={service.title}
+              className="group relative bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 hover:-translate-y-2"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
               {/* Image */}
               <div className="relative h-52 overflow-hidden">
-                <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-petrol-dark/80 to-transparent" />
               </div>
 
@@ -67,16 +91,21 @@ export const Services = () => {
                 <p className="mb-4 line-clamp-3 text-petrol-dark">
                   {service.description}
                 </p>
-                <a href="#contato" className="inline-flex items-center gap-2 font-medium transition-colors group/link text-muted-foreground">
-                  <span className="text-muted-foreground">Saiba mais</span>
+                <Link
+                  to={service.slug}
+                  className="inline-flex items-center gap-2 font-medium transition-colors group/link text-muted-foreground hover:text-secondary"
+                >
+                  <span>Saiba mais</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
-                </a>
+                </Link>
               </div>
 
               {/* Accent Border */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-petrol-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-            </article>)}
+            </article>
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
