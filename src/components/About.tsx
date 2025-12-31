@@ -44,7 +44,7 @@ export const About = () => {
                 <Target className="w-7 h-7 text-primary-foreground" />
               </div>
               <h3 className="text-2xl font-heading font-semibold text-foreground mb-4">Nossa Missão</h3>
-              <p className="text-muted-foreground">
+              <p className="text-destructive-foreground">
                 Prestar serviços de engenharia e logística com excelência técnica, segurança operacional 
                 e respeito ao meio ambiente, contribuindo para o desenvolvimento sustentável do setor 
                 energético brasileiro.
