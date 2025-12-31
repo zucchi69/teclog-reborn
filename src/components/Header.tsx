@@ -52,8 +52,8 @@ export const Header = () => {
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-gradient-gold rounded-xl flex items-center justify-center shadow-gold">
-              <span className="text-petrol-dark font-heading font-bold text-xl">T</span>
+            <div className="w-12 h-12 bg-petrol-accent rounded-xl flex items-center justify-center shadow-petrol">
+              <span className="text-primary-foreground font-heading font-bold text-xl">T</span>
             </div>
             <div className="flex flex-col">
               <span className={`font-heading font-bold text-2xl tracking-tight ${isScrolled ? 'text-petrol' : 'text-primary-foreground'}`}>
