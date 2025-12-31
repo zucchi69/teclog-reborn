@@ -11,10 +11,10 @@ const stats = [{
   label: "Projetos Concluídos"
 }];
 export const Hero = () => {
-  return <section id="inicio" className="relative min-h-[85vh] flex items-center">
+  return <section id="inicio" className="relative min-h-screen flex items-center">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="Engenharia de dutos e pipelines" className="w-full h-full object-cover" />
+        <img src={heroBg} alt="Engenharia de dutos e pipelines" className="w-full h-full object-cover object-[center_70%]" />
         <div className="absolute inset-0 bg-gradient-overlay" />
         <div className="absolute inset-0 bg-petrol-dark/40" />
       </div>
