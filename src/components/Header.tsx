@@ -46,7 +46,7 @@ export const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className="sticky top-0 z-50 bg-petrol-dark/95 backdrop-blur-md shadow-lg py-3">
+      <header className="sticky top-0 z-50 backdrop-blur-md shadow-lg py-3 bg-[#04294d]">
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-3">
