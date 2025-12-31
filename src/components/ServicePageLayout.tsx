@@ -24,9 +24,9 @@ export const ServicePageLayout = ({
 }: ServicePageLayoutProps) => {
   const { pathname } = useLocation();
 
-  // Scroll to top when page loads
+  // Scroll to top when page loads - instant, no animation
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, [pathname]);
 
   return (
@@ -36,19 +36,19 @@ export const ServicePageLayout = ({
       {/* Hero Section - Compact with solid color */}
       <section className="bg-petrol-dark py-6">
         <div className="container mx-auto px-4">
+          <span className="block text-secondary font-medium tracking-widest uppercase text-xs mb-1">
+            {subtitle}
+          </span>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-white mb-2">
+            {title}
+          </h1>
           <Link
             to="/#servicos"
-            className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-2 text-sm"
+            className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm"
           >
             <ArrowLeft className="w-3 h-3" />
             Voltar aos serviços
           </Link>
-          <span className="block text-secondary font-medium tracking-widest uppercase text-xs mb-1">
-            {subtitle}
-          </span>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-white">
-            {title}
-          </h1>
         </div>
       </section>
 
@@ -83,10 +83,10 @@ export const ServicePageLayout = ({
               {/* CTA */}
               <div className="pt-6">
                 <Button asChild size="lg" className="gap-2">
-                  <a href="/#contato">
+                  <Link to="/#contato">
                     <Phone className="w-4 h-4" />
                     Solicitar Orçamento
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>
