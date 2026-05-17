@@ -34,7 +34,7 @@ export const About = () => {
             </div>
 
             <Button variant="default" size="lg" asChild>
-              <Link to="/#contato">Entre em Contato</Link>
+              <a href="#contato">Entre em Contato</a>
             </Button>
           </div>
 

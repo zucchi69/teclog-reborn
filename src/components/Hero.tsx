@@ -63,7 +63,7 @@ export const Hero = () => {
               <Link to="/#servicos">Conheça Nossos Serviços</Link>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
-              <Link to="/#contato">Fale Conosco</Link>
+              <a href="#contato">Fale Conosco</a>
             </Button>
           </div>
 

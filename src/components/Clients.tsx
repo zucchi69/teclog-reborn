@@ -65,12 +65,12 @@ export const Clients = () => {
             Entre em contato conosco e descubra como podemos agregar valor às
             operações da sua empresa com nossos serviços especializados.
           </p>
-          <Link
-            to="/#contato"
+          <a
+            href="#contato"
             className="inline-flex items-center gap-2 font-semibold px-8 py-4 rounded-xl transition-colors shadow-gold bg-[#b3dfe6] text-secondary-foreground"
           >
             Solicitar Proposta Comercial
-          </Link>
+          </a>
         </div>
       </div>
     </section>
