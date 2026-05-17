@@ -29,7 +29,7 @@ export const Footer = () => {
               <img
                 src={teclogLogo}
                 alt="TECLOG - Tecnologia e Logística"
-                className="h-24 w-auto object-contain brightness-0 invert"
+                className="h-28 md:h-32 w-auto object-contain brightness-0 invert"
               />
             </a>
             <p className="mb-6 text-muted">
