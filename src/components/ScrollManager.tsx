@@ -28,11 +28,6 @@ export const ScrollManager = () => {
       const element = document.getElementById(elementId);
 
       if (element) {
-        // Desativa smooth scroll temporariamente para scroll instantâneo
-        const htmlElement = document.documentElement;
-        const originalScrollBehavior = htmlElement.style.scrollBehavior;
-        htmlElement.style.scrollBehavior = "auto";
-
         // Calcula offset do header (aproximadamente 80px)
         const headerOffset = 80;
         const elementPosition = element.getBoundingClientRect().top;
@@ -40,12 +35,7 @@ export const ScrollManager = () => {
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: "auto",
-        });
-
-        // Restaura o scroll-behavior original
-        requestAnimationFrame(() => {
-          htmlElement.style.scrollBehavior = originalScrollBehavior;
+          behavior: "smooth",
         });
       }
     }, 10);
