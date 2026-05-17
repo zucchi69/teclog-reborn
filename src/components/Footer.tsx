@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import teclogLogo from "@/assets/teclog-logo.png";
 const footerLinks = [{
   label: "Início",
   href: "#inicio"
@@ -24,18 +25,12 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <a href="#inicio" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-petrol-accent rounded-xl flex items-center justify-center shadow-petrol">
-                <span className="text-primary-foreground font-heading font-bold text-xl">T</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-2xl tracking-tight text-primary-foreground">
-                  TECLOG
-                </span>
-                <span className="text-xs font-medium tracking-widest text-primary-foreground">
-                  TECNOLOGIA E LOGÍSTICA
-                </span>
-              </div>
+            <a href="#inicio" className="inline-flex items-center mb-6">
+              <img
+                src={teclogLogo}
+                alt="TECLOG - Tecnologia e Logística"
+                className="h-20 w-auto object-contain brightness-0 invert"
+              />
             </a>
             <p className="mb-6 text-muted">
               Há mais de 30 anos oferecendo soluções especializadas em engenharia e 

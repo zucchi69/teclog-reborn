@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import teclogLogo from "@/assets/teclog-logo.png";
 
 const navLinks = [
   { label: "Início", href: "/#inicio" },
@@ -60,20 +61,12 @@ export const Header = () => {
       <header className="sticky top-0 z-50 backdrop-blur-md shadow-lg py-3 bg-[#04294d]">
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/#inicio" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-petrol-accent rounded-xl flex items-center justify-center shadow-petrol">
-              <span className="text-primary-foreground font-heading font-bold text-xl">
-                T
-              </span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-bold text-2xl tracking-tight text-primary-foreground">
-                TECLOG
-              </span>
-              <span className="text-xs font-medium tracking-widest text-gold-light">
-                TECNOLOGIA E LOGÍSTICA
-              </span>
-            </div>
+          <Link to="/#inicio" className="flex items-center">
+            <img
+              src={teclogLogo}
+              alt="TECLOG - Tecnologia e Logística"
+              className="h-14 md:h-16 w-auto object-contain brightness-0 invert"
+            />
           </Link>
 
           {/* Desktop Navigation */}
