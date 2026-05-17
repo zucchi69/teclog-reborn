@@ -65,7 +65,7 @@ export const Header = () => {
             <img
               src={teclogLogo}
               alt="TECLOG - Tecnologia e Logística"
-              className="h-24 md:h-28 w-auto object-contain brightness-0 invert"
+              className="h-12 md:h-14 w-auto object-contain brightness-0 invert"
             />
           </Link>
 
