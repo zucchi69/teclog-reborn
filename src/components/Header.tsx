@@ -37,11 +37,11 @@ export const Header = () => {
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
             <a
-              href="tel:+552732450143"
+              href="tel:+5527997728616"
               className="flex items-center gap-2 hover:text-gold transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span>(27) 3245-0143</span>
+              <span>(27) 99772-8616</span>
             </a>
             <a
               href="mailto:teclog@teclog.eng.br"
@@ -62,13 +62,11 @@ export const Header = () => {
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <Link to="/#inicio" className="flex items-center">
-            <div className="bg-white rounded-xl px-4 py-2 shadow-md">
-              <img
-                src={teclogLogo}
-                alt="TECLOG - Tecnologia e Logística"
-                className="h-10 md:h-12 w-auto object-contain"
-              />
-            </div>
+            <img
+              src={teclogLogo}
+              alt="TECLOG - Tecnologia e Logística"
+              className="h-10 md:h-12 w-auto object-contain brightness-0 invert"
+            />
           </Link>
 
           {/* Desktop Navigation */}
