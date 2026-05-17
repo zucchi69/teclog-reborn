@@ -26,13 +26,11 @@ export const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <a href="#inicio" className="inline-flex items-center mb-6">
-              <div className="bg-white rounded-xl px-4 py-3 shadow-md">
-                <img
-                  src={teclogLogo}
-                  alt="TECLOG - Tecnologia e Logística"
-                  className="h-16 w-auto object-contain"
-                />
-              </div>
+              <img
+                src={teclogLogo}
+                alt="TECLOG - Tecnologia e Logística"
+                className="h-16 w-auto object-contain brightness-0 invert"
+              />
             </a>
             <p className="mb-6 text-muted">
               Há mais de 30 anos oferecendo soluções especializadas em engenharia e 
