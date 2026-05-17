@@ -62,11 +62,13 @@ export const Header = () => {
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo */}
           <Link to="/#inicio" className="flex items-center">
-            <img
-              src={teclogLogo}
-              alt="TECLOG - Tecnologia e Logística"
-              className="h-14 md:h-16 w-auto object-contain brightness-0 invert"
-            />
+            <div className="bg-white rounded-xl px-4 py-2 shadow-md">
+              <img
+                src={teclogLogo}
+                alt="TECLOG - Tecnologia e Logística"
+                className="h-10 md:h-12 w-auto object-contain"
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
